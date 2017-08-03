@@ -12,4 +12,13 @@
             </dataSource>
         </environment>
     </environments>
+    <mappers>
+        <mapper resource="com.jc02/dao/Resourcces.xml"/>
+    </mappers>
+    <mappers>
+        <mapper resource="com.jc02/dao/Roleinfo.xml"/>
+    </mappers>
+    <mappers>
+        <mapper resource="com.jc02/dao/Userinfo.xml"/>
+    </mappers>
 </configuration>
