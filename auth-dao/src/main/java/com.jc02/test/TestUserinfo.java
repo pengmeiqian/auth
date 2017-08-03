@@ -23,18 +23,33 @@ public class TestUserinfo {
         int num=0;
         //增加一个用户
         Userinfo u=new Userinfo();
-        u.setUid(12);
+       /* u.setUid(12);
         u.setUname("张三");
         u.setUpass("123");
         u.setUstatus("1");
         num=dao.insertUser(u);
-        System.out.println(num);
         session.commit();
-        System.out.println("增加用户成功，受到影响的行数是"+num);
-        //删除一个用户
+        System.out.println("增加用户成功，受到影响的行数是"+num);*/
 
-        u.setUname("李四");
-        num=dao.updateUser(11);
+        //修改一个用户
+       /* u.setUname("李四");
+        u.setUstatus("0");
+        num=dao.updateUser("11");
+        session.commit();
+        System.out.println("修改用户成功，受到影响的行数是"+num);*/
+
+        //删除用户
+        /*num=dao.deleteUser("11");
+        session.commit();
+        System.out.println("删除用户成功，受到影响的行数是"+num);*/
+        //查询一个用户
+        u=dao.findUser("1");
+        session.commit();
+        System.out.println("该用户是"+u);
+        //查询所有用户
+
+
+
 
 
 
