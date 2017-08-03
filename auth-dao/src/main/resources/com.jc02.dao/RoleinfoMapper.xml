@@ -16,5 +16,6 @@
         where rid=#{rid}
     </update>
     <delete id="delete" parameterType="String" >
-    delete from Roleinfo where rid=#{rid}</delete>>
+    delete from Roleinfo where rid=#{rid}
+    </delete>>
 </mapper>
