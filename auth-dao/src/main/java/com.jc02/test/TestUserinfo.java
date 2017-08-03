@@ -34,7 +34,7 @@ public class TestUserinfo {
         //删除一个用户
 
         u.setUname("李四");
-        num=dao.updateUser(11);
+
 
 
 
