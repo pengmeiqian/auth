@@ -13,9 +13,9 @@ import java.util.List;
 
 public interface UserinfoDao {
     public boolean Login(String uname,String upass);
-    public int insertUser();
-    public int deleteUser();
-    public int updateUser();
+    public int insertUser(Userinfo userinfo);
+    public int deleteUser(String uid);
+    public int updateUser(String uid);
     public List<Userinfo> findAllUser();
     public Userinfo findUser(String uid);
 }

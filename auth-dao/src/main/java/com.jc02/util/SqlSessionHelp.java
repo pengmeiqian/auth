@@ -14,7 +14,7 @@ public class SqlSessionHelp {
 	private static SqlSessionFactory factory;
 
 	static{
-		Reader reader = null;
+		Reader reader ;
 		try {
 			reader = Resources.getResourceAsReader("mybatis-config.xml");
 			System.out.println("读取配置文件成功");

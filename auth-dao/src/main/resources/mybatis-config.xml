@@ -2,6 +2,10 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <properties resource="db.properties"></properties>
+    <typeAliases>
+        <typeAlias type="com.jc02.entity.Userinfo" alias="Userinfo"/>
+        <typeAlias type="com.jc02.entity.Roleinfo" alias="Roleinfo"/>
+    </typeAliases>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
@@ -15,11 +19,7 @@
     </environments>
     <mappers>
         <mapper resource="com.jc02.dao/ResourccesMapper.xml"/>
-    </mappers>
-    <mappers>
         <mapper resource="com.jc02.dao/RoleinfoMapper.xml"/>
-    </mappers>
-    <mappers>
         <mapper resource="com.jc02.dao/UserinfoDaoMapper.xml"/>
     </mappers>
 </configuration>

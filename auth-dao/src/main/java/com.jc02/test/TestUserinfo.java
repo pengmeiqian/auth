@@ -27,9 +27,12 @@ public class TestUserinfo {
         u.setUname("张三");
         u.setUpass("123");
         u.setUstatus("1");
-        num=dao.insertUser();
+        num=dao.insertUser(u);
         session.commit();
         System.out.println("增加用户成功，受到影响的行数是"+num);
+        //删除一个用户
+
+
 
 
     }
