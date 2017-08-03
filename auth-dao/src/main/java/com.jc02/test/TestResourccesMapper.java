@@ -22,12 +22,14 @@ public class TestResourccesMapper {
         SqlSession session=SqlSessionHelp.SqlSessionHelp();
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
 
-        Resourcces resourcces=new Resourcces();
+        /*Resourcces resourcces=new Resourcces();
 		resourcces.setRname("服务");
         resourcces.setResurl("http://server.com");
         resourcces.setRedsdes("就业");
 		int num=dao.insert(resourcces);
 		session.commit();
-		System.out.println(num);
+		System.out.println(num);*/
+        dao.delete("5");
+        session.commit();
     }
 }

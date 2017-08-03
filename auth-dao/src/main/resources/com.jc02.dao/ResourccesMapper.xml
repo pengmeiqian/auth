@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jc02.dao.ResourccesDao">
     <select id="findByUserId" parameterType="String" resultType="com.jc02.entity.Resourcces">
-        select * from Resourcces where uid=#{uid}
+        select * from Resourcces where rid=#{rid}
     </select>
     <insert id="insert" parameterType="com.jc02.entity.Resourcces">
         insert into Resourcces values(null,#{rname},#{resurl},#{resorderno},#{redsdes},null,null,null,null,#{parentID})
