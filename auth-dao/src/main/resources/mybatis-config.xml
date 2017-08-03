@@ -15,11 +15,7 @@
     </environments>
     <mappers>
         <mapper resource="com.jc02.dao/ResourccesMapper.xml"/>
-    </mappers>
-    <mappers>
         <mapper resource="com.jc02.dao/RoleinfoMapper.xml"/>
-    </mappers>
-    <mappers>
         <mapper resource="com.jc02.dao/UserinfoDaoMapper.xml"/>
     </mappers>
 </configuration>

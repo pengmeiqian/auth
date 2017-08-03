@@ -21,7 +21,7 @@ public class TestRoleinfoMapper {
             System.out.println(string);
         }
 
-        /*Roleinfo cardinfo=dao.findBycardid("4");
+       /*Roleinfo cardinfo=dao.findBycardid("4");
         System.out.println(cardinfo);
 */
 
