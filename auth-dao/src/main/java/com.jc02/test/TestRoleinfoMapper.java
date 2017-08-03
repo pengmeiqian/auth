@@ -5,6 +5,26 @@ package com.jc02.test;/*
  *  |    @description   　　　　　　　　　　　　　                                                              　
  */
 
+import com.jc02.dao.RoleinfoDao;
+import com.jc02.entity.Roleinfo;
+import com.jc02.util.SqlSessionHelp;
+import org.apache.ibatis.session.SqlSession;
+
+import java.util.List;
+
 public class TestRoleinfoMapper {
+    public static void main(String[] args) {
+        SqlSession session= SqlSessionHelp.SqlSessionHelp();
+        RoleinfoDao dao=session.getMapper(RoleinfoDao.class);
+        List<Roleinfo> list=dao.findAll();
+        for (Roleinfo string : list) {
+            System.out.println(string);
+        }
+
+        /*Roleinfo cardinfo=dao.findBycardid("4");
+        System.out.println(cardinfo);
+*/
+
+    }
 }
 

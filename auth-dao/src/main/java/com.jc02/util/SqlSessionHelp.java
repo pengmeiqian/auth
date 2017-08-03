@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class SqlSessionHelp {
 	private static SqlSession session;
 	private static SqlSessionFactory factory;
-	private static Logger log = Logger.getLogger("SqlSessionHelp.class");
+
 	static{
 		Reader reader = null;
 		try {
