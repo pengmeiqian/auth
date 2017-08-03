@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <properties resource="db.properties"></properties>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:3306/auth" />
-                <property name="username" value="root" />
-                <property name="password" value="root" />
+                <property name="driver" value="${sdriver}" />
+                <property name="url" value="${surl}" />
+                <property name="username" value="${susername}" />
+                <property name="password" value="${spassword}" />
             </dataSource>
         </environment>
     </environments>
