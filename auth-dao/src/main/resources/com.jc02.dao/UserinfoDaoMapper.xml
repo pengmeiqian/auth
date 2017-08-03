@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jc02.dao.UserinfoDao">
     <insert id="insertUser"  parameterType="Userinfo">
-        INSERT INTO userinfo VALUES (uid=#{uid},uname=#{uname},upass=#{upass},ustatus=#{ustatus})
+        INSERT INTO userinfo VALUES (#{uid},#{uname},#{upass},#{ustatus})
     </insert>
     <delete id="deleteUser" parameterType="String">
         DELETE FROM userinfo where uid=#{uid}
