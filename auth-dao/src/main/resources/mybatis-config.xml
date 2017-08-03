@@ -14,12 +14,12 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="com.jc02/dao/Resourcces.xml"/>
+        <mapper resource="com.jc02.dao/ResourccesMapper.xml"/>
     </mappers>
     <mappers>
-        <mapper resource="com.jc02/dao/Roleinfo.xml"/>
+        <mapper resource="com.jc02.dao/RoleinfoMapper.xml"/>
     </mappers>
     <mappers>
-        <mapper resource="com.jc02/dao/Userinfo.xml"/>
+        <mapper resource="com.jc02.dao/UserinfoDaoMapper.xml"/>
     </mappers>
 </configuration>
