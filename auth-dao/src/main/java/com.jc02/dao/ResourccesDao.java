@@ -16,8 +16,7 @@ import java.util.List;
  * +---------------------------------Oooo-----------------------------+
  */
 public interface ResourccesDao {
-    public List<Resourcces> findAll();
-    public Resourcces findById(String rid);
+    public Resourcces findByUserId(String uid);
     public int insert(Resourcces resourcces);
     public int update(Resourcces resourcces);
     public int delete(String rid);

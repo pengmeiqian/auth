@@ -19,8 +19,8 @@ public class Resourcces {
     private String resurl;
     private int resorderno;
     private String redsdes;
-    private Date createTime;
-    private Date updatetime;
+    private String createTime;
+    private String updatetime;
     private String createMan;
     private String updateMan;
     private int parentID;
@@ -65,19 +65,19 @@ public class Resourcces {
         this.redsdes = redsdes;
     }
 
-    public Date getCreateTime() {
+    public String getCreateTime() {
         return createTime;
     }
 
-    public void setCreateTime(Date createTime) {
+    public void setCreateTime(String createTime) {
         this.createTime = createTime;
     }
 
-    public Date getUpdatetime() {
+    public String getUpdatetime() {
         return updatetime;
     }
 
-    public void setUpdatetime(Date updatetime) {
+    public void setUpdatetime(String updatetime) {
         this.updatetime = updatetime;
     }
 
