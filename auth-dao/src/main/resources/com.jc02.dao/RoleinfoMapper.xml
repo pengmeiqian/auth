@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jc02.dao.RoleinfoDao">
+    <select id="findAll"
+            resultType="Roleinfo">
+        select * from Roleinfo
+    </select>
+    <select id="findByrid" parameterType="String" resultType="Roleinfo">
+        select *from Roleinfo where rid=#{rid}
+    </select>
+    <insert id="insert" parameterType="Roleinfo">
+        insert into Roleinfo values(#{rid},#{rname}})
+    </insert>
+    <update id="update" parameterType="Roleinfo" >
+        update Roleinfo set rname=#{rname}
+        where rid=#{rid}
+    </update>
+    <delete id="delete" parameterType="String" >
+    delete from Roleinfo where rid=#{rid}</delete>>
+</mapper>
