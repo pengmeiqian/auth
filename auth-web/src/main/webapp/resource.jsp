@@ -49,33 +49,31 @@
     <div class="sidebar-content">
       <!--一级菜单循环从这里开始 ，动态循环显示一级菜单-->
       <c:forEach var="r" items="${reslist}">
-        <c:if test="${r.parnetId==null}">
-
-
-      <div class="sidebar-nav">
-        <div class="sidebar-title">
-          <a href="#">
-            <span class="icon"><b class="fl icon-arrow-down"></b></span>
-            <span class="text-normal">${r.rname}</span>
-          </a>
-        </div>
-        <ul class="sidebar-trans">
-          <!--二级菜单循环从这里开始 ，动态循环显示二级菜单-->
-          <c:forEach var="second_r" items="${reslist}">
-            <c:if test="${second_r.parnetId==r.rid}">
-          <li>
-            <a href="${second_r.resurl}">
-              <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
-              <span class="text-normal">${second_r.rname}</span>
-            </a>
-          </li>
-          </c:if>
-          </c:forEach>
-          <!--二级菜单循环从这里结束 ，动态循环显示二级菜单-->
-        </ul>
-      </div>
-      <!--一级菜单循环从这里结束 ，动态循环显示一级菜单-->
-      </c:if>
+        <c:if test="${r.parentId==null}">
+          <div class="sidebar-nav">
+            <div class="sidebar-title">
+              <a href="#">
+                <span class="icon"><b class="fl icon-arrow-down"></b></span>
+                <span class="text-normal">${r.rname}</span>
+              </a>
+            </div>
+            <ul class="sidebar-trans">
+              <!--二级菜单循环从这里开始 ，动态循环显示二级菜单-->
+              <c:forEach var="sec_r" items="${reslist}">
+                <c:if test="${sec_r.parentId==r.rid}">
+                  <li>
+                    <a href="#">
+                      <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16"/></b>
+                      <span class="text-normal">${sec_r.rname}</span>
+                    </a>
+                  </li>
+                </c:if>
+              </c:forEach>
+              <!--二级菜单循环从这里结束 ，动态循环显示二级菜单-->
+            </ul>
+          </div>
+        </c:if>
+        <!--一级菜单循环从这里结束 ，动态循环显示一级菜单-->
       </c:forEach>
     </div>
   </div>
