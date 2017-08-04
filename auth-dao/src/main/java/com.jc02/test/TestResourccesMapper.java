@@ -23,7 +23,7 @@ public class TestResourccesMapper {
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
         int num=0;
         //查询
-        Resourcces resourcces=dao.findByRoleId("1");
+        Resourcces resourcces=dao.findByUserId("1");
         System.out.println(resourcces);
 
         //增加
@@ -41,12 +41,12 @@ public class TestResourccesMapper {
         System.out.println("受到影响的行数为"+num);*/
 
         //修改
-        resourcces.setRid(1);//
+        /*resourcces.setRid(1);//
         resourcces.setRname("就业服务");
         resourcces.setResurl("http://baidu.com");
         resourcces.setRedsdes("就业模块");
         num=dao.update(resourcces);
         session.commit();
-        System.out.println("受到影响的行数为"+num);
+        System.out.println("受到影响的行数为"+num);*/
     }
 }

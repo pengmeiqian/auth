@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.jc02.dao.ResourccesDao">
-    <select id="findByRoleId" parameterType="String" resultType="com.jc02.entity.Resourcces">
+    <select id="findByUserId" parameterType="String" resultType="com.jc02.entity.Resourcces">
         SELECT * FROM `resourcces`
         WHERE rid IN(SELECT `resourceid` FROM `roleresource` WHERE `roleid` IN
         (SELECT `uid` FROM `urinfo`WHERE uid=#{userid}))
