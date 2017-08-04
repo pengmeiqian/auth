@@ -15,4 +15,7 @@
     <delete id="delete" parameterType="String">
         delete from Resourcces where rid=#{rid}
     </delete>
+    <select id="findAllResource" resultType="com.jc02.entity.Resourcces">
+        SELECT * FROM resourcces
+    </select>
 </mapper>
