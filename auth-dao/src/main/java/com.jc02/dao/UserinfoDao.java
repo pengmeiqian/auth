@@ -12,7 +12,9 @@ import com.jc02.entity.Userinfo;
 import java.util.List;
 
 public interface UserinfoDao {
+
     public boolean Login(String uname,String upass);
+
 
     public int insertUser(Userinfo userinfo);
 
@@ -21,5 +23,8 @@ public interface UserinfoDao {
 
     public List<Userinfo> findAllUser();
 
+    public Userinfo findUser(String uid,String uname);
+
     public Userinfo findUser(String uid);
+
 }
