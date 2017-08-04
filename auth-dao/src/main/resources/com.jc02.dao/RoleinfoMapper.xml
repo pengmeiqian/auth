@@ -9,7 +9,7 @@
         select *from Roleinfo where rid=#{rid}
     </select>
     <insert id="insert" parameterType="Roleinfo">
-        insert into Roleinfo values(#{rid},#{rname}})
+        insert into Roleinfo values(#{rid},#{rname})
     </insert>
     <update id="update" parameterType="Roleinfo" >
         update Roleinfo set rname=#{rname}

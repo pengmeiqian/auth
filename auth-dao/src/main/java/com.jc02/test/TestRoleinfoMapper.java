@@ -21,8 +21,21 @@ public class TestRoleinfoMapper {
             System.out.println(string);
         }
 
-       Roleinfo cardinfo=dao.findByrid("4");
-        System.out.println(cardinfo);
+      /* Roleinfo roleinfo=dao.findByrid("4");
+        System.out.println(roleinfo);*/
+
+      /* roleinfo.setRname("人事主管");
+        dao.update(roleinfo);
+        System.out.println(roleinfo);
+        session.commit();
+*/
+      /*  Roleinfo roleinfo1=new Roleinfo();
+        roleinfo1.setRid(5);
+        roleinfo1.setRname("就业主管");
+        dao.insert(roleinfo1);
+        session.commit();
+        System.out.println(roleinfo1);
+*/
 
 
 
