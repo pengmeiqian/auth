@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/8/4.
  */
-@WebServlet(name = "GetResourcesByUserServlet",urlPatterns = "/")
+@WebServlet(name = "GetResourcesByUserServlet",urlPatterns = "/getResource")
 public class GetResourcesByUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);
