@@ -12,6 +12,8 @@ import com.jc02.entity.Userinfo;
 import com.jc02.util.SqlSessionHelp;
 import org.apache.ibatis.session.SqlSession;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class TestUserinfo {
@@ -23,18 +25,41 @@ public class TestUserinfo {
         int num=0;
         //增加一个用户
         Userinfo u=new Userinfo();
-        u.setUid(12);
+       /* u.setUid(12);
         u.setUname("张三");
         u.setUpass("123");
         u.setUstatus("1");
         num=dao.insertUser(u);
         System.out.println(num);
         session.commit();
-        System.out.println("增加用户成功，受到影响的行数是"+num);
-        //删除一个用户
+        System.out.println("增加用户成功，受到影响的行数是"+num);*/
 
-        u.setUname("李四");
-        num=dao.updateUser(11);
+        //查找一个用户
+       /* u=dao.findUser("11");
+        System.out.println(u);
+        session.commit();*/
+
+        //修改一个用户
+     /*   u.setUname("李四");
+        u.setUstatus("0");
+        u.setUpass("123456");
+        num=dao.updateUser(u);
+        session.commit();
+        System.out.println("修改用户成功，受到影响的行数是"+num);*/
+
+        //查找所有的用户
+     /*   List<Userinfo> user=new ArrayList<Userinfo>();
+        user=dao.findAllUser();
+        for(Userinfo s:user){
+            System.out.println(s);
+        }
+        session.commit();*/
+
+        //删除一个用户
+        num=dao.deleteUser("12");
+        session.commit();
+        System.out.println("删除用户成功，受到影响的行数为"+num);
+
 
 
 

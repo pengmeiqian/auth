@@ -7,8 +7,8 @@
     <delete id="deleteUser" parameterType="String">
         DELETE FROM userinfo where uid=#{uid}
     </delete>
-    <update id="updateUser" parameterType="String" >
-        UPDATE userinfo SET upass=#{upass},ustatus=#{ustatus} WHERE uid=#{uid}
+    <update id="updateUser" parameterType="Userinfo" >
+        UPDATE userinfo SET upass=#{upass},ustatus=#{ustatus},uname=#{uname} WHERE uid=#{uid}
     </update>
     <select id="findAllUser" resultType="Userinfo">
         SELECT * FROM userinfo
