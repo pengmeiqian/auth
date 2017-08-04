@@ -35,9 +35,12 @@ public class TestUserinfo {
         System.out.println("增加用户成功，受到影响的行数是"+num);*/
 
         //查找一个用户
-        u=dao.findUser("11","李四");
-        System.out.println(u);
-        session.commit();
+
+        Userinfo userinfo=new Userinfo();
+        userinfo.setUname("李四");
+        userinfo.setUpass("123456");
+        u=dao.checkLogin(userinfo);
+        System.out.println(u.getUid());
 
         //修改一个用户
      /*   u.setUname("李四");

@@ -13,9 +13,6 @@ import java.util.List;
 
 public interface UserinfoDao {
 
-    public boolean Login(String uname,String upass);
-
-
     public int insertUser(Userinfo userinfo);
 
     public int deleteUser(String uid);
@@ -23,7 +20,7 @@ public interface UserinfoDao {
 
     public List<Userinfo> findAllUser();
 
-    public Userinfo findUser(String uid,String uname);
+    public Userinfo checkLogin(Userinfo userinfo);
 
     public Userinfo findUser(String uid);
 
