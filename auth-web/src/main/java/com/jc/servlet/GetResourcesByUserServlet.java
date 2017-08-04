@@ -1,5 +1,6 @@
 package com.jc.servlet;
 
+import com.jc02.dao.UserinfoDao;
 import com.jc02.entity.Resourcces;
 import com.jc02.entity.Userinfo;
 import com.jc02.util.SqlSessionHelp;
@@ -27,12 +28,14 @@ public class GetResourcesByUserServlet extends HttpServlet {
             request.setCharacterEncoding("UTF-8");
             response.setCharacterEncoding("UTF-8");
         ResourccesDao resourcesDao=SqlSessionHelp.SqlSessionHelp().getMapper(ResourccesDao.class);
+        UserinfoDao userinfoDao=SqlSessionHelp.SqlSessionHelp().getMapper(UserinfoDao.class);
         Userinfo userInfo=(Userinfo)request.getSession().getAttribute("user");
         if(userInfo !=null){
             //获取当前登录用户所拥有的资源
             List<Resourcces> reslist= (List<Resourcces>) resourcesDao.findByUserId(userInfo.getUid());
+            request.getSession().setAttribute("reslist",reslist);
+            List<Userinfo> userList=userinfoDao.findAllUser();
             request.setAttribute("reslist",reslist);
-
             request.getRequestDispatcher("index.jsp").forward(request,response);
         }else{
             response.sendRedirect("index.jsp");

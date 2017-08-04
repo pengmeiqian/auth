@@ -11,7 +11,8 @@
         UPDATE userinfo SET upass=#{upass},ustatus=#{ustatus},uname=#{uname} WHERE uid=#{uid}
     </update>
     <select id="findAllUser" resultType="Userinfo">
-        SELECT * FROM userinfo
+        SELECT  userinfo.* roleinfo.rname FROM userinfo LEFT JOIN urinfo ON userinfo.uid=urinfo.rid
+        LEFT JOIN roleinfo ON roleinfo.rid=urinfo.rid
     </select>
     <select id="checkLogin"  parameterType="Userinfo" resultType="Userinfo">
         SELECT * FROM userinfo WHERE uname=#{uname} AND upass=#{upass}
