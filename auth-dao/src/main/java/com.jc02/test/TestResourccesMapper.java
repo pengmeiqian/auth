@@ -21,15 +21,32 @@ public class TestResourccesMapper {
     public static void main(String[] args) {
         SqlSession session=SqlSessionHelp.SqlSessionHelp();
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
+        int num=0;
+        //查询
+        Resourcces resourcces=dao.findByRoleId("1");
+        System.out.println(resourcces);
 
+        //增加
         /*Resourcces resourcces=new Resourcces();
 		resourcces.setRname("服务");
         resourcces.setResurl("http://server.com");
         resourcces.setRedsdes("就业");
-		int num=dao.insert(resourcces);
+		num=dao.insert(resourcces);
 		session.commit();
-		System.out.println(num);*/
-        dao.delete("5");
+		System.out.println("受到影响的行数为"+num);*/
+
+        //删除
+        /*num=dao.delete("4");
         session.commit();
+        System.out.println("受到影响的行数为"+num);*/
+
+        //修改
+        resourcces.setRid(1);
+        resourcces.setRname("就业");
+        resourcces.setResurl("http://baidu.com");
+        resourcces.setRedsdes("就业模块");
+        num=dao.update(resourcces);
+        session.commit();
+        System.out.println("受到影响的行数为"+num);
     }
 }
