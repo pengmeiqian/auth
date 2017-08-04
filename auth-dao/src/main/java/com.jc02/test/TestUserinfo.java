@@ -35,9 +35,9 @@ public class TestUserinfo {
         System.out.println("增加用户成功，受到影响的行数是"+num);*/
 
         //查找一个用户
-       /* u=dao.findUser("11");
+        u=dao.findUser("11","李四");
         System.out.println(u);
-        session.commit();*/
+        session.commit();
 
         //修改一个用户
      /*   u.setUname("李四");
@@ -56,9 +56,9 @@ public class TestUserinfo {
         session.commit();*/
 
         //删除一个用户
-        num=dao.deleteUser("12");
+        /*num=dao.deleteUser("12");
         session.commit();
-        System.out.println("删除用户成功，受到影响的行数为"+num);
+        System.out.println("删除用户成功，受到影响的行数为"+num);*/
 
 
 

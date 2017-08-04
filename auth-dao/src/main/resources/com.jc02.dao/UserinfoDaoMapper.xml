@@ -13,7 +13,7 @@
     <select id="findAllUser" resultType="Userinfo">
         SELECT * FROM userinfo
     </select>
-    <select id="findUser" parameterType="String" resultType="Userinfo">
-        SELECT * FROM userinfo WHERE uid=#{uid}
+    <select id="findUser"  resultType="Userinfo">
+        SELECT * FROM userinfo WHERE uid=#{0} AND uname=#{1}
     </select>
 </mapper>
