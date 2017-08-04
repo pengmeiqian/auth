@@ -18,6 +18,8 @@ import java.util.List;
 public interface ResourccesDao {
     public Resourcces findByUserId(String rid);
 
+    public List<Resourcces> findAllResource();
+
     public int insert(Resourcces resourcces);
 
     public int update(Resourcces resourcces);
