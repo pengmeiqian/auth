@@ -5,6 +5,8 @@ import com.jc02.entity.Resourcces;
 import com.jc02.util.SqlSessionHelp;
 import org.apache.ibatis.session.SqlSession;
 
+import java.util.List;
+
 /**
  * 　　  　  　       \\\|///
  * 　　　 　  　   \\　.-.-　//
@@ -23,9 +25,13 @@ public class TestResourccesMapper {
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
         int num=0;
         //查询
-        Resourcces resourcces=dao.findByUserId("1");
-        System.out.println(resourcces);
+        /*Resourcces resourcces=dao.findByUserId("1");
+        System.out.println(resourcces);*/
 
+        List<Resourcces> list=dao.findAllResource();
+        for(Resourcces resourcces:list){
+            System.out.println(resourcces);
+        }
         //增加
         /*Resourcces resourcces=new Resourcces();
 		resourcces.setRname("服务");
