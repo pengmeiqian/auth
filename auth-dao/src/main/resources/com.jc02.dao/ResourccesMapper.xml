@@ -10,7 +10,7 @@
         insert into Resourcces values(null,#{rname},#{resurl},#{resorderno},#{redsdes},null,null,null,null,#{parentID})
     </insert>
     <update id="update" parameterType="com.jc02.entity.Resourcces">
-        update Resourcces set rname=#{rname},resurl=#{resurl}redsdes=#{redsdes},parentID=#{parentID}
+        update Resourcces set rname=#{rname},resurl=#{resurl},redsdes=#{redsdes} WHERE rid=#{rid}
     </update>
     <delete id="delete" parameterType="String">
         delete from Resourcces where rid=#{rid}
