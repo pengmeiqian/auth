@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Created by THINK on 2017/8/4.
  */
-@WebServlet(name = "ResourceServlet",value = "/ResourceServlet")
+@WebServlet(name = "ResourceServlet",value = "/findAllResource")
 public class ResourceServlet extends HttpServlet {
 
     ResourccesDao resourccesDao= SqlSessionHelp.SqlSessionHelp().getMapper(ResourccesDao.class);
