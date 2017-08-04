@@ -17,7 +17,10 @@ import java.util.List;
  */
 public interface ResourccesDao {
     public Resourcces findByRoleId(String rid);
+
     public int insert(Resourcces resourcces);
+
     public int update(Resourcces resourcces);
+
     public int delete(String rid);
 }

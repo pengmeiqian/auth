@@ -42,7 +42,7 @@ public class TestResourccesMapper {
 
         //修改
         resourcces.setRid(1);
-        resourcces.setRname("就业");
+        resourcces.setRname("就业服务");
         resourcces.setResurl("http://baidu.com");
         resourcces.setRedsdes("就业模块");
         num=dao.update(resourcces);

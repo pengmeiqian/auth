@@ -9,8 +9,12 @@ import java.util.List;
  */
 public interface RoleinfoDao {
     public List<Roleinfo> findAll();
+
     public Roleinfo findByrid(String rid);
+
     public int insert(Roleinfo roleinfo);
+
     public int update(Roleinfo roleinfo);
+
     public int delete(String rid);
 }
