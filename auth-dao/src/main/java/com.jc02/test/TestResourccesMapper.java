@@ -41,7 +41,7 @@ public class TestResourccesMapper {
         System.out.println("受到影响的行数为"+num);*/
 
         //修改
-        resourcces.setRid(1);
+        resourcces.setRid(1);//
         resourcces.setRname("就业服务");
         resourcces.setResurl("http://baidu.com");
         resourcces.setRedsdes("就业模块");
