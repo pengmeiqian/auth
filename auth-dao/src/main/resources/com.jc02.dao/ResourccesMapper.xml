@@ -4,7 +4,7 @@
     <select id="findByRoleId" parameterType="String" resultType="com.jc02.entity.Resourcces">
         SELECT `roleid`,r.* FROM(
         SELECT * FROM `resourcces` Re JOIN `roleresource` Ro
-        WHERE Re.`rid`=Ro.`resourceid`) r WHERE roleid=#{roleid}
+        on Re.`rid`=Ro.`resourceid`) r WHERE roleid=#{roleid}
     </select>
     <insert id="insert" parameterType="com.jc02.entity.Resourcces">
         insert into Resourcces values(null,#{rname},#{resurl},#{resorderno},#{redsdes},null,null,null,null,#{parentID})
