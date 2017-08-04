@@ -49,7 +49,7 @@
     <div class="sidebar-content">
       <!--一级菜单循环从这里开始 ，动态循环显示一级菜单-->
       <c:forEach var="r" items="${reslist}">
-        <c:if test="${r.parentId==null}">
+        <c:if test="${r.parentID==null}">
           <div class="sidebar-nav">
             <div class="sidebar-title">
               <a href="#">

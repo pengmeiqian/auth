@@ -25,13 +25,15 @@ public class TestResourccesMapper {
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
         int num=0;
         //查询
-        /*Resourcces resourcces=dao.findByUserId("1");
-        System.out.println(resourcces);*/
+        List<Resourcces> resourcces=dao.findByUserId(1);
+        for (Resourcces r:resourcces){
+            System.out.println(r.toString());
+        }
 
-        List<Resourcces> list=dao.findAllResource();
+       /* List<Resourcces> list=dao.findAllResource();
         for(Resourcces resourcces:list){
             System.out.println(resourcces);
-        }
+        }*/
         //增加
         /*Resourcces resourcces=new Resourcces();
 		resourcces.setRname("服务");

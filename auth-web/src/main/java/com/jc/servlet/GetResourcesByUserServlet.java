@@ -27,18 +27,18 @@ public class GetResourcesByUserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             request.setCharacterEncoding("UTF-8");
             response.setCharacterEncoding("UTF-8");
-        ResourccesDao resourcesDao=SqlSessionHelp.SqlSessionHelp().getMapper(ResourccesDao.class);
-        UserinfoDao userinfoDao=SqlSessionHelp.SqlSessionHelp().getMapper(UserinfoDao.class);
-        Userinfo userInfo=(Userinfo)request.getSession().getAttribute("user");
-        if(userInfo !=null){
-            //获取当前登录用户所拥有的资源
-            List<Resourcces> reslist= (List<Resourcces>) resourcesDao.findByUserId(userInfo.getUid());
-            request.getSession().setAttribute("reslist",reslist);
-            List<Userinfo> userList=userinfoDao.findAllUser();
-            request.setAttribute("reslist",reslist);
-            request.getRequestDispatcher("index.jsp").forward(request,response);
-        }else{
-            response.sendRedirect("index.jsp");
+            ResourccesDao resourcesDao=SqlSessionHelp.SqlSessionHelp().getMapper(ResourccesDao.class);
+            Userinfo userInfo=(Userinfo)request.getSession().getAttribute("user");
+            if(userInfo !=null){
+                //获取当前登录用户所拥有的资源
+                List<Resourcces> reslist= (List<Resourcces>) resourcesDao.findByUserId(userInfo.getUid());
+                request.getSession().setAttribute("reslist",reslist);
+                for(Resourcces resourcces:reslist){
+                    System.out.println(resourcces.toString());
+                }
+                request.getRequestDispatcher("index.jsp").forward(request,response);
+            }else{
+                response.sendRedirect("index.jsp");
+            }
         }
-    }
 }

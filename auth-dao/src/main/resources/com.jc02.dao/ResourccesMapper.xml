@@ -4,7 +4,7 @@
     <select id="findByUserId" parameterType="int" resultType="Resourcces">
         SELECT * FROM `resourcces`
         WHERE rid IN(SELECT `resourceid` FROM `roleresource` WHERE `roleid` IN
-        (SELECT `uid` FROM `urinfo`WHERE uid=#{userid}))
+        (SELECT `roleid` FROM `urinfo`WHERE uid=#{userid}))
     </select>
     <insert id="insert" parameterType="Resourcces">
         insert into Resourcces values(null,#{rname},#{resurl},#{resorderno},#{redsdes},null,null,null,null,#{parentID})
