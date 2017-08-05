@@ -60,26 +60,17 @@
         <ul class="sidebar-trans">
           <!--二级菜单循环从这里开始 ，动态循环显示二级菜单-->
 
-          <li>
-            <a href="#">
-              <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
-              <span class="text-normal">二级菜单</span>
-            </a>
-          </li>
-          <!--二级菜单循环从这里结束 ，动态循环显示二级菜单-->
-          <li>
-            <a href="#">
-              <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
-              <span class="text-normal">二级菜单</span>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
-              <span class="text-normal">二级菜单</span>
-            </a>
-          </li>
+          <c:forEach var="sr" items="${reslist}">
+            <c:if test="${sr.parentID==fr.rid}">
 
+          <li>
+            <a href="#">
+              <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
+              <span class="text-normal">${sr.rname}</span>
+            </a>
+          </li>
+            </c:if>
+          </c:forEach>
         </ul>
       </div>
         </c:if>

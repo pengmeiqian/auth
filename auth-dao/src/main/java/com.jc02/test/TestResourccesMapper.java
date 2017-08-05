@@ -23,7 +23,7 @@ public class TestResourccesMapper {
     public static void main(String[] args) {
         SqlSession session=SqlSessionHelp.SqlSessionHelp();
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
-        int num=0;
+        int num=0;//
         //查询
         List<Resourcces> resourcces=dao.findByUserId(1);
         for (Resourcces r:resourcces){

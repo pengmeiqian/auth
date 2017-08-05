@@ -107,7 +107,7 @@
                 操作
               </div>
             </div>
-            <c:forEach var="r" items="${allresource}">
+            <c:forEach var="r" items="${allresource}" >
             <div class="tr clearfix border-bottom-none">
               <div class="td w20">
                 ${r.rname}
