@@ -12,6 +12,15 @@ public class Userinfo {
     private String uname;
     private String upass;
     private String ustatus;
+    private WeiXinInfo weiXinInfo;
+
+    public WeiXinInfo getWeiXinInfo() {
+        return weiXinInfo;
+    }
+
+    public void setWeiXinInfo(WeiXinInfo weiXinInfo) {
+        this.weiXinInfo = weiXinInfo;
+    }
 
     public int getUid() {
         return uid;
@@ -52,6 +61,7 @@ public class Userinfo {
                 ", uname='" + uname + '\'' +
                 ", upass='" + upass + '\'' +
                 ", ustatus='" + ustatus + '\'' +
+                ", weiXinInfo=" + weiXinInfo +
                 '}';
     }
 }
