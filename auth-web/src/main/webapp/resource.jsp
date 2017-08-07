@@ -48,32 +48,32 @@
   <div class="view-sidebar">
     <div class="sidebar-content">
       <!--一级菜单循环从这里开始 ，动态循环显示一级菜单-->
-      <c:forEach var="r" items="${reslist}">
-        <c:if test="${r.parentID==null}">
+      <c:forEach var="fr" items="${reslist}">
+        <c:if test="${fr.parentID==0}">
           <div class="sidebar-nav">
             <div class="sidebar-title">
               <a href="#">
                 <span class="icon"><b class="fl icon-arrow-down"></b></span>
-                <span class="text-normal">${r.rname}</span>
+                <span class="text-normal">${fr.rname}</span>
               </a>
             </div>
             <ul class="sidebar-trans">
               <!--二级菜单循环从这里开始 ，动态循环显示二级菜单-->
-              <c:forEach var="sec_r" items="${reslist}">
-                <c:if test="${sec_r.parentId==r.rid}">
+
+              <c:forEach var="sr" items="${reslist}">
+                <c:if test="${sr.parentID==fr.rid}">
+
                   <li>
                     <a href="#">
-                      <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16"/></b>
-                      <span class="text-normal">${sec_r.rname}</span>
+                      <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
+                      <span class="text-normal">${sr.rname}</span>
                     </a>
                   </li>
                 </c:if>
               </c:forEach>
-              <!--二级菜单循环从这里结束 ，动态循环显示二级菜单-->
             </ul>
           </div>
         </c:if>
-        <!--一级菜单循环从这里结束 ，动态循环显示一级菜单-->
       </c:forEach>
     </div>
   </div>
@@ -89,6 +89,7 @@
       </div>
       <div class="authority-content">
         <div class="list-content show">
+          <a href="/toAddResource"><input type="submit" value="新增模块" class="submit fl"></a><br>
           <div class="offcial-table tr-border margin-big-top clearfix">
             <div class="tr-th clearfix">
               <div class="th w20">
@@ -122,7 +123,8 @@
                   ${r.resorderno}
               </div>
               <div class="td w20">
-                <a href="#"  class="button-word2 btn_ajax_confirm">删除</a>
+                <a href="#"  class="button-word2 btn_ajax_confirm">编辑</a>|
+                <a href="dodeleteResource.action?pid=${r.rid}"  class="button-word2 btn_ajax_confirm">删除</a>
               </div>
             </div>
             </c:forEach>

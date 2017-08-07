@@ -18,4 +18,7 @@
     <select id="findAllResource" resultType="Resourcces">
         SELECT * FROM resourcces
     </select>
+    <select id="findFirstResources" parameterType="Resourcces" resultType="Resourcces">
+        SELECT * from resourcces WHERE parentID=0
+    </select>
 </mapper>

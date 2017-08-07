@@ -25,12 +25,12 @@ public class TestResourccesMapper {
         ResourccesDao dao=session.getMapper(ResourccesDao.class);
         int num=0;//
         //查询
-        List<Resourcces> resourcces=dao.findByUserId(1);
+        List<Resourcces> resourcces=dao.findByUserId(11);
         for (Resourcces r:resourcces){
             System.out.println(r.toString());
         }
 
-       /* List<Resourcces> list=dao.findAllResource();
+        /*List<Resourcces> list=dao.findAllResource();
         for(Resourcces resourcces:list){
             System.out.println(resourcces);
         }*/

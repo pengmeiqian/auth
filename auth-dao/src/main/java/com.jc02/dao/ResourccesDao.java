@@ -20,6 +20,8 @@ public interface ResourccesDao {
 
     public List<Resourcces> findAllResource();
 
+    public List<Resourcces> findFirstResources();
+
     public int insert(Resourcces resourcces);
 
     public int update(Resourcces resourcces);
