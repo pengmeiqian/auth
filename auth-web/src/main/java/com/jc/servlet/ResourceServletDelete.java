@@ -24,10 +24,8 @@ public class ResourceServletDelete extends HttpServlet {
         if (b==1){
             response.sendRedirect("resourcelist");
         }else {
-            response.getWriter().append("Sorry!");
+            response.getWriter().append("Sorry!");//
         }
-
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
