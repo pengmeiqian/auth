@@ -52,7 +52,7 @@
         <c:if test="${fr.parentID==0}">
       <div class="sidebar-nav">
         <div class="sidebar-title">
-          <a href="#">
+          <a href="${sr.resurl}">
             <span class="icon"><b class="fl icon-arrow-down"></b></span>
             <span class="text-normal">${fr.rname}</span>
           </a>
@@ -64,7 +64,7 @@
             <c:if test="${sr.parentID==fr.rid}">
 
           <li>
-            <a href="#">
+            <a href="${sr.resurl}">
               <b class="sidebar-icon"><img src="Images/icon_author.png" width="16" height="16" /></b>
               <span class="text-normal">${sr.rname}</span>
             </a>
