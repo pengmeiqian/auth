@@ -17,13 +17,13 @@ public class Resourcces {
     private int rid;
     private String rname;
     private String resurl;
-    private int resorderno;
+    private String resorderno;
     private String redsdes;
     private String createTime;
     private String updatetime;
     private String createMan;
     private String updateMan;
-    private int parentID;
+    private String parentID;
 
     public int getRid() {
         return rid;
@@ -49,11 +49,11 @@ public class Resourcces {
         this.resurl = resurl;
     }
 
-    public int getResorderno() {
+    public String getResorderno() {
         return resorderno;
     }
 
-    public void setResorderno(int resorderno) {
+    public void setResorderno(String resorderno) {
         this.resorderno = resorderno;
     }
 
@@ -97,11 +97,11 @@ public class Resourcces {
         this.updateMan = updateMan;
     }
 
-    public int getParentID() {
+    public String getParentID() {
         return parentID;
     }
 
-    public void setParentID(int parentID) {
+    public void setParentID(String parentID) {
         this.parentID = parentID;
     }
 
