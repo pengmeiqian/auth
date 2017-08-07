@@ -36,11 +36,11 @@ public class TestUserinfo {
 
         //查找一个用户
 
-        Userinfo userinfo=new Userinfo();
+ /*       Userinfo userinfo=new Userinfo();
         userinfo.setUname("李四");
         userinfo.setUpass("123456");
         u=dao.checkLogin(userinfo);
-        System.out.println(u.getUid());
+        System.out.println(u.getUid());*/
 
         //修改一个用户
      /*   u.setUname("李四");
@@ -51,12 +51,10 @@ public class TestUserinfo {
         System.out.println("修改用户成功，受到影响的行数是"+num);*/
 
         //查找所有的用户
-     /*   List<Userinfo> user=new ArrayList<Userinfo>();
-        user=dao.findAllUser();
-        for(Userinfo s:user){
-            System.out.println(s);
-        }
-        session.commit();*/
+        List<Userinfo> user=new ArrayList<Userinfo>();
+        user=dao.findAllUser("1");
+        System.out.println(user);
+        session.commit();
 
         //删除一个用户
         /*num=dao.deleteUser("12");

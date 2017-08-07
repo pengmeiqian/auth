@@ -16,9 +16,10 @@ public interface UserinfoDao {
     public int insertUser(Userinfo userinfo);
 
     public int deleteUser(String uid);
+
     public int updateUser(Userinfo userinfo);
 
-    public List<Userinfo> findAllUser();
+    public List<Userinfo> findAllUser(String uid);
 
     public Userinfo checkLogin(Userinfo userinfo);
 
