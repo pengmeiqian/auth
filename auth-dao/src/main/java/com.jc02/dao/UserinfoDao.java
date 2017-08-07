@@ -19,10 +19,10 @@ public interface UserinfoDao {
 
     public int updateUser(Userinfo userinfo);
 
-    public List<Userinfo> findAllUser(String uid);
+    public List<Userinfo> findUserByWeiXin(String uid);
 
     public Userinfo checkLogin(Userinfo userinfo);
 
-    public Userinfo findUser(String uid);
+    public List<Userinfo> findAllUserAndRole();
 
 }

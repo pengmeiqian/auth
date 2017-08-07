@@ -13,7 +13,7 @@ public class Userinfo {
     private String upass;
     private String ustatus;
     private WeiXinInfo weiXinInfo;
-
+    private Roleinfo roleinfo;
     public WeiXinInfo getWeiXinInfo() {
         return weiXinInfo;
     }
@@ -54,6 +54,14 @@ public class Userinfo {
         this.ustatus = ustatus;
     }
 
+    public Roleinfo getRoleinfo() {
+        return roleinfo;
+    }
+
+    public void setRoleinfo(Roleinfo roleinfo) {
+        this.roleinfo = roleinfo;
+    }
+
     @Override
     public String toString() {
         return "Userinfo{" +
@@ -62,6 +70,7 @@ public class Userinfo {
                 ", upass='" + upass + '\'' +
                 ", ustatus='" + ustatus + '\'' +
                 ", weiXinInfo=" + weiXinInfo +
+                ", roleinfo=" + roleinfo +
                 '}';
     }
 }

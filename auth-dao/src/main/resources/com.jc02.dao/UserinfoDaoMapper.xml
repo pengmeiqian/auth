@@ -10,7 +10,7 @@
     <update id="updateUser" parameterType="Userinfo" >
         UPDATE userinfo SET upass=#{upass},ustatus=#{ustatus},uname=#{uname} WHERE uid=#{uid}
     </update>
-    <select id="findAllUser" parameterType="String" resultMap="userinfoMap">
+    <select id="findUserByWeiXin" parameterType="String" resultMap="userinfoMap">
         SELECT * FROM userinfo JOIN weixininfo on userinfo.weixinhao=weixininfo.weixinhao WHERE userinfo.uid=#{uid}
     </select>
     <resultMap id="userinfoMap" type="com.jc02.entity.Userinfo">
@@ -24,8 +24,16 @@
             <result column="weixinnicheng" property="weixinnicheng"></result>
             <result column="weixinimg" property="weixinimg"></result>
         </association>
+        <association property="roleinfo" javaType="com.jc02.entity.Roleinfo">
+            <id column="rid" property="rid"></id>
+            <result column="rname" property="rname"></result>
+        </association>
     </resultMap>
     <select id="checkLogin"  parameterType="Userinfo" resultType="Userinfo">
         SELECT * FROM userinfo WHERE uname=#{uname} AND upass=#{upass}
+    </select>
+    <select id="findAllUserAndRole"  resultMap="userinfoMap">
+        SELECT b.`uid`,b.`uname`,b.`ustatus`,c.`rname` FROM urinfo a JOIN userinfo b ON a.`uid`=b.`uid`
+                     JOIN roleinfo c ON a.`rid`=c.`rid`
     </select>
 </mapper>

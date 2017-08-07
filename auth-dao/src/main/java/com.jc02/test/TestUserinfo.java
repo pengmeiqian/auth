@@ -50,17 +50,22 @@ public class TestUserinfo {
         session.commit();
         System.out.println("修改用户成功，受到影响的行数是"+num);*/
 
-        //查找所有的用户
-        List<Userinfo> user=new ArrayList<Userinfo>();
-        user=dao.findAllUser("1");
+        //将用户的所有信息显示出来（包括微信信息）
+       /* List<Userinfo> user=new ArrayList<Userinfo>();
+        user=dao.findUserByWeiXin("1");
         System.out.println(user);
-        session.commit();
+        session.commit();*/
 
         //删除一个用户
         /*num=dao.deleteUser("12");
         session.commit();
         System.out.println("删除用户成功，受到影响的行数为"+num);*/
 
+        //查找所有的用户
+        List<Userinfo> a=new ArrayList<Userinfo>();
+        a=dao.findAllUserAndRole();
+        session.commit();
+        System.out.println(a);
 
 
 

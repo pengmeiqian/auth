@@ -33,10 +33,11 @@ public class GetResourcesByUserServlet extends HttpServlet {
                 //获取当前登录用户所拥有的资源
                 List<Resourcces> reslist= (List<Resourcces>) resourcesDao.findByUserId(userInfo.getUid());
                 request.getSession().setAttribute("reslist",reslist);
-                for(Resourcces resourcces:reslist){
+                /*for(Resourcces resourcces:reslist){
                     System.out.println(resourcces.toString());
-                }
-                request.getRequestDispatcher("index.jsp").forward(request,response);
+                }*/
+               // request.getRequestDispatcher("index.jsp").forward(request,response);
+                response.sendRedirect("/finduserinfoandrolename");
             }else{
                 response.sendRedirect("index.jsp");
             }

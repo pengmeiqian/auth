@@ -93,40 +93,43 @@
           <div class="offcial-table tr-border margin-big-top clearfix">
             <div class="tr-th clearfix">
               <div class="th w20">
-                管理员
+                用户id
               </div>
               <div class="th w20">
-                所属于角色
+                姓名
               </div>
               <div class="th w20">
                 状态
               </div>
               <div class="th w20">
-                创建时间
+                角色名
               </div>
               <div class="th w20">
                 操作
               </div>
             </div>
+            <c:forEach var="as" items="${li}">
             <div class="tr clearfix border-bottom-none">
               <div class="td w20">
-                吴文杰
+                ${as.getUid()}
               </div>
               <div class="td w20">
-                管理员
+                ${as.getUname()}
               </div>
               <div class="td w20">
-                水电费
+                ${as.getUstatus()}
               </div>
               <div class="td w20">
-                2016-01-10 11:54:07
+                ${as.getRoleinfo().rname}
               </div>
               <div class="td w20">
                 <a href="#"  class="button-word2 btn_ajax_confirm">删除</a>
               </div>
             </div>
+            </c:forEach>
           </div>
         </div>
+
         <div class="show-page padding-big-right">
           <div class="page">
             <div class="page">
