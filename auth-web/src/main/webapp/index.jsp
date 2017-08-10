@@ -88,6 +88,7 @@
           </h6>
         </div>
       </div>
+      <a href="/toAddResource"><input type="submit" value="新增用户" class="submit fl" style="margin-left:25px;margin-top:3px"></a><br>
       <div class="authority-content">
         <div class="list-content show">
           <div class="offcial-table tr-border margin-big-top clearfix">
@@ -123,7 +124,8 @@
                 ${as.getRoleinfo().rname}
               </div>
               <div class="td w20">
-                <a href="#"  class="button-word2 btn_ajax_confirm">删除</a>
+                <a href="#"  class="button-word2 btn_ajax_confirm">修改</a> |
+                <a href="dodeleteUser.action?pid=${as.getUid()}"  class="button-word2 btn_ajax_confirm">删除</a>
               </div>
             </div>
             </c:forEach>
